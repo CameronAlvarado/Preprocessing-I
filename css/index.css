@@ -133,9 +133,21 @@ table {
 html,
 body {
   height: 100%;
+  max-width: 1000px;
+  background-color: orange;
 }
+/* --------- global font here ------------- */
+p,
+h1,
+h2,
+h3,
+a {
+  font-family: 'Chakra Petch', sans-serif;
+}
+/* ---------------------------------------- */
 p {
   font-size: 1.2rem;
+  line-height: 1.5rem;
 }
 a {
   text-decoration: none;
@@ -153,8 +165,10 @@ hr {
 }
 nav {
   display: flex;
-  padding-left: 50rem;
-  justify-content: space-between;
+  max-width: 100%;
+  border-radius: 5px;
+  background-color: darkgrey;
+  justify-content: space-around;
 }
 nav a {
   text-decoration: none;
@@ -164,6 +178,7 @@ nav a {
   display: flex;
   width: 100%;
   padding: 3%;
+  border-radius: 10px;
   flex-direction: column;
   background-color: lightgrey;
 }
@@ -174,8 +189,8 @@ nav a {
   padding-bottom: 0.7rem;
 }
 .intro img {
-  width: 25%;
-  height: auto;
+  width: 200px;
+  height: 200px;
 }
 .intro h1 {
   font-size: 4rem;
@@ -184,24 +199,24 @@ nav a {
   font-size: 1.8rem;
 }
 .intro a {
-  border-radius: 30px;
+  border-radius: 7px;
   width: 10rem;
   text-align: center;
   padding: 0.7rem;
-  background: #757575;
+  background: black;
   color: white;
-  text-shadow: 0 0 0.3rem darkgrey, 0 0 0.5rem #FFF, 0 0 0.7rem darkgrey, 0 0 20px black;
+  text-shadow: 0 0 0.1rem #000000, 0 0 0.3rem #FFF, 0 0 0.7rem darkgrey;
 }
 .intro a:hover {
   background: white;
   color: black;
   animation-name: fade;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   text-shadow: 0 0 0.2rem darkgrey, 0 0 0.5rem #FFF, 0 0 0.7rem #FFF, 0 0 20px black;
 }
 @keyframes fade {
   from {
-    background-color: darkgrey;
+    background-color: black;
   }
   to {
     background-color: white;
@@ -217,13 +232,36 @@ nav a {
   display: flex;
   width: 100%;
   padding: 3%;
+  border-radius: 10px;
   flex-direction: column;
   background-color: darkgrey;
+}
+.skills .skillList {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3%;
+}
+.skills .skillList p {
+  border-bottom: 1px dashed white;
+  margin-bottom: 10px;
+  width: 40%;
 }
 .history {
   display: flex;
   width: 100%;
   padding: 3%;
+  border-radius: 10px;
   flex-direction: column;
   background-color: grey;
+}
+.contact {
+  display: flex;
+  width: 100%;
+  padding: 3%;
+  border-radius: 10px;
+  flex-direction: column;
+  background-color: black;
+}
+.contact h2 {
+  color: darkgrey;
 }
