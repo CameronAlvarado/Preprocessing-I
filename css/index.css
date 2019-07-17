@@ -136,6 +136,7 @@ body {
   max-width: 1000px;
   background-color: orange;
 }
+/* ----------------- MixIn ---------------- */
 /* --------- global font here ------------- */
 p,
 h1,
@@ -176,21 +177,27 @@ nav a {
 }
 .intro {
   display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 3%;
   border-radius: 10px;
-  flex-direction: column;
   background-color: lightgrey;
+}
+@media screen and (max-width: 500px) {
+  .intro {
+    margin-top: 3%;
+  }
 }
 .intro img,
 .intro h1,
 .intro h3,
 .intro p {
-  padding-bottom: 0.7rem;
+  margin-bottom: 0.7rem;
 }
 .intro img {
   width: 200px;
   height: 200px;
+  border: 1px solid darkgrey;
 }
 .intro h1 {
   font-size: 4rem;
@@ -230,38 +237,67 @@ nav a {
 }
 .skills {
   display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 3%;
   border-radius: 10px;
-  flex-direction: column;
   background-color: darkgrey;
+}
+@media screen and (max-width: 500px) {
+  .skills {
+    margin-top: 3%;
+  }
 }
 .skills .skillList {
   display: flex;
   flex-direction: column;
-  margin-top: 3%;
+  margin-top: 2%;
 }
 .skills .skillList p {
   border-bottom: 1px dashed white;
   margin-bottom: 10px;
-  width: 40%;
+  margin-top: 10px;
+  width: 25rem;
 }
 .history {
   display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 3%;
   border-radius: 10px;
-  flex-direction: column;
   background-color: grey;
+}
+@media screen and (max-width: 500px) {
+  .history {
+    margin-top: 3%;
+  }
+}
+.history .historyList {
+  border-bottom: 1px dashed white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 25rem;
 }
 .contact {
   display: flex;
+  flex-direction: column;
   width: 100%;
   padding: 3%;
   border-radius: 10px;
-  flex-direction: column;
   background-color: black;
 }
+@media screen and (max-width: 500px) {
+  .contact {
+    margin-top: 3%;
+  }
+}
 .contact h2 {
-  color: darkgrey;
+  color: white;
+}
+.contact p {
+  border-bottom: 1px dashed white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  width: 25rem;
+  color: white;
 }
