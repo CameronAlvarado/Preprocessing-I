@@ -137,6 +137,10 @@ body {
 p {
   font-size: 1.2rem;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 h2 {
   font-size: 2.5rem;
 }
@@ -178,4 +182,48 @@ nav a {
 }
 .intro h3 {
   font-size: 1.8rem;
+}
+.intro a {
+  border-radius: 30px;
+  width: 10rem;
+  text-align: center;
+  padding: 0.7rem;
+  background: #757575;
+  color: white;
+  text-shadow: 0 0 0.3rem darkgrey, 0 0 0.5rem #FFF, 0 0 0.7rem darkgrey, 0 0 20px black;
+}
+.intro a:hover {
+  background: white;
+  color: black;
+  animation-name: fade;
+  animation-duration: 1s;
+  text-shadow: 0 0 0.2rem darkgrey, 0 0 0.5rem #FFF, 0 0 0.7rem #FFF, 0 0 20px black;
+}
+@keyframes fade {
+  from {
+    background-color: darkgrey;
+  }
+  to {
+    background-color: white;
+  }
+  from {
+    color: white;
+  }
+  to {
+    color: black;
+  }
+}
+.skills {
+  display: flex;
+  width: 100%;
+  padding: 3%;
+  flex-direction: column;
+  background-color: darkgrey;
+}
+.history {
+  display: flex;
+  width: 100%;
+  padding: 3%;
+  flex-direction: column;
+  background-color: grey;
 }
