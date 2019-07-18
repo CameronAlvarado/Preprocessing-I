@@ -78,10 +78,15 @@ html, body {
 	width: 25rem;
 }
 
+/* ----------------- Variable ---------------- */
+@colorDG: darkgrey;
+@font: 'Chakra Petch', sans-serif;
+/* ----------------- Variable ---------------- */
+
 /* --------- global font here ------------- */
 
 p, h1, h2, h3, a {
-	font-family: 'Chakra Petch', sans-serif;
+	font-family: @font;
 }
 /* ---------------------------------------- */
 
@@ -104,7 +109,7 @@ h2 {
 }
 hr {
 	width: 100%;
-	border: 1px solid darkgrey;
+	border: 1px solid @colorDG;
 }
 
 .wrapper {
@@ -120,7 +125,7 @@ nav {
 	max-width: 100%;
 	border-radius: 5px;
 	// padding-left: 14rem;
-	background-color: darkgrey;
+	background-color: @colorDG;
 	justify-content: space-around;
 	a {
 		text-decoration: none;
@@ -137,7 +142,7 @@ nav {
 	img {
 		width: 200px;
 		height: 200px;
-		border: 1px solid darkgrey;
+		border: 1px solid @colorDG;
 	}
 	h1 {
 		font-size: 4rem;
@@ -152,14 +157,14 @@ nav {
 		padding: 0.7rem;
 		background: black;
 		color: white;
-		text-shadow: 0 0 0.1rem rgb(0, 0, 0), 0 0 0.3rem #FFF, 0 0 0.7rem darkgrey;
+		text-shadow: 0 0 0.1rem rgb(0, 0, 0), 0 0 0.3rem #FFF, 0 0 0.7rem @colorDG;
 	}
 	a:hover {
 		background: white;
   		color: black;
   		animation-name: fade;
 		animation-duration: .5s;
-		text-shadow: 0 0 0.2rem darkgrey, 0 0 0.5rem #FFF, 0 0 0.7rem #FFF, 0 0 20px black;
+		text-shadow: 0 0 0.2rem @colorDG, 0 0 0.5rem #FFF, 0 0 0.7rem #FFF, 0 0 20px black;
 	}
 	@keyframes fade {
 		from {background-color: black;}
@@ -171,7 +176,7 @@ nav {
 
 .skills {
 	.sectionFormat();
-	background-color: darkgrey;
+	background-color: @colorDG;
 	.skillList {
 		display: flex;
 		flex-direction: column;
