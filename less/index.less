@@ -54,6 +54,156 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	max-width: 1000px;
+	background-color: orange;
 }
 
+/* ----------------- MixIn ---------------- */
+
+.sectionFormat() {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding: 3%;
+	border-radius: 10px;
+	@media screen and (max-width: 500px) {
+		margin-top: 3%;
+	}
+}
+.underlineText() {
+	border-bottom: 1px dashed white;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	width: 25rem;
+}
+
+/* ----------------- Variable ---------------- */
+@colorDG: darkgrey;
+@font: 'Chakra Petch', sans-serif;
+/* ----------------- Variable ---------------- */
+
+/* --------- global font here ------------- */
+
+p, h1, h2, h3, a {
+	font-family: @font;
+}
+/* ---------------------------------------- */
+
+p {
+	font-size: 1.2rem;
+	line-height: 1.5rem;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+nav a:hover {
+	color: dodgerblue;
+}
+
+h2 {
+	font-size: 2.5rem;
+}
+hr {
+	width: 100%;
+	border: 1px solid @colorDG;
+}
+
+.wrapper {
+	margin: 3%;
+}
+
+header {
+
+}
+
+nav {
+	display: flex;
+	max-width: 100%;
+	border-radius: 5px;
+	// padding-left: 14rem;
+	background-color: @colorDG;
+	justify-content: space-around;
+	a {
+		text-decoration: none;
+		color: black;
+	}
+}
+
+.intro {
+	.sectionFormat();
+	background-color: lightgrey;
+	img, h1, h3, p {
+		margin-bottom: 0.7rem;
+	}
+	img {
+		width: 200px;
+		height: 200px;
+		border: 1px solid @colorDG;
+	}
+	h1 {
+		font-size: 4rem;
+	}
+	h3 {
+		font-size: 1.8rem;
+	}
+	a {
+		border-radius: 7px;
+		width: 10rem;
+		text-align: center;
+		padding: 0.7rem;
+		background: black;
+		color: white;
+		text-shadow: 0 0 0.1rem rgb(0, 0, 0), 0 0 0.3rem #FFF, 0 0 0.7rem @colorDG;
+	}
+	a:hover {
+		background: white;
+  		color: black;
+  		animation-name: fade;
+		animation-duration: .5s;
+		text-shadow: 0 0 0.2rem @colorDG, 0 0 0.5rem #FFF, 0 0 0.7rem #FFF, 0 0 20px black;
+	}
+	@keyframes fade {
+		from {background-color: black;}
+		to {background-color: white;}
+		from {color: white;}
+		to {color: black;}
+	  }
+}
+
+.skills {
+	.sectionFormat();
+	background-color: @colorDG;
+	.skillList {
+		display: flex;
+		flex-direction: column;
+		margin-top: 2%;
+		p {
+			.underlineText();
+		}
+	}
+}
+
+.history {
+	.sectionFormat();
+	background-color: grey;
+	.historyList {
+		.underlineText();
+	}
+
+}
+
+.contact {
+	.sectionFormat();
+	background-color: black;
+	h2 {
+		color: white;
+	}
+	p {
+		.underlineText();
+		color: white;
+	}
+}
